@@ -30,9 +30,9 @@ Building complex circuits on the breadboard Is not easy and is very prone to err
 
 5)	**Keep your build tidy and compact** – Wires should not be much longer than needed and your circuits should be reasonably compact so that you have room for future labs.
 
----
+___
 **Task 1: Check the Waveform Generator (WG) on the Keysight**
----
+___
 
 The Keysight Scope comes with an in-built waveform generator (WG) which will be used to provide signal source for this experiment.  This task is designed for you to explore its capabilities and limitations.  
 * Set up the WG to output a 1kHz sinewave with 2V amplitude and 0V offset.  Measure this using the scope and the multimeter.
@@ -41,7 +41,8 @@ The Keysight Scope comes with an in-built waveform generator (WG) which will be 
 
 > What conclusion can you draw about the source impedance of the WG of the Keysight Scope?  Confirm this with the manual of the Keysight Scope EDUX1002G (see course webpage).
 
----
+___
 **Task 2 – Unity Gain Amplifier**
 ___
 
+That is so funny! :joy:
