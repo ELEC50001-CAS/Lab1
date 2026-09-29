@@ -119,7 +119,7 @@ With the applied sine wave signal, measure the output V1 on the oscilloscope.  R
 
 **Step 2 - Fixing the problem**
 
-To fix the problem identified in Step 1, modify your previous circuit by adding a 1uF ceramic capacitor and a 10uF electrolytic capacitor as shown below.  Measure V1 on the PicoScope and verify that the amplifier now provides a gain of 4 for the 10kHz sine wave.
+To fix the problem identified in Step 1, modify your previous circuit by adding a 1uF ceramic capacitor and a 10uF electrolytic capacitor as shown below.  Measure V1 on the oscilloscope and verify that the amplifier now provides a gain of 4 for the 10kHz sine wave.
 
 <p align="center"> <img src="diagrams/fig3_2.jpg" /> </p>
 
@@ -160,9 +160,57 @@ In this task, you will explore how the gain varies with signal frequency.
 
 **Step 2:** Replace R1 with a 2k resistor.  
 
->.  What is the expected gain of your amplifier now?  Given the answer you provided in Step 1, what do you expect to see at the output of the op-amp V1?  
+>What is the expected gain of your amplifier now?  Given the answer you provided in Step 1, what do you expect to see at the output of the op-amp V1?  
 
 Confirm your prediction with the oscilloscope.
 
 **Step 3:** Now vary the frequency from 100Hz to 100kHz in sensible steps and measure V1.   Plot the gain of this amplifier (in dB) versus frequency.  Explain the result with reference to MCP6002’s open-loop frequency response from the datasheet and the notes.
 
+___
+**Task 6: Two stage amplifier for microphone signal**
+---
+
+We have established in the previous task that a single stage amplifier with a gain of 100 will not work with signals near or above 10kHz.  To overcome this limitation, one can use two amplification stages.  We will now build a 2-stage amplifier for audio signal produced by a microphone as shown below.
+
+>You should use both op-amp from the same package for this task – do not use separate chips.
+
+<p align="center"> <img src="diagrams/fig6_1.jpg" /> </p>
+
+**Step 1:** Replace R1 with a 10k resistor.  Use the second op-amp in the same package to construct the inverting amplifer and cascade your previous circuit (task 5).  
+
+>What is the gain of stage one and stage two, and overall gain of the set up.
+
+Verify this using the Oscilloscope.
+
+**Step 2:**  Use the microphone provided as the signal source instead of the waveform generator of the oscilloscope according to the circuit below.  Add the 3.5mm audio jack as shown.  You should be able to amplify live audio signal captured by the microphone listen to it using a earplug connected to the 3.5mm jack breakout board.  
+
+<p align="center"> <img src="diagrams/fig6_2.jpg" /> </p>
+
+>What are the purposes of R7 and C8 in this circuit?
+
+You will find in your Lab-in-a-Box there is an 8 $\Omega$ speaker.  Connect this to the op-amp output V2 via the series capacitor C8.  
+
+>What do you expect will happen?  Why?
+
+___
+**Task 7: Driving a low impedance load using a class-D audio amplifier**
+---
+
+To drive a speaker with such as low resistance load, an ordinary op-amp such as the MCP6002 will not work.  The output current is limited to ±23mA or lower.  You need a special type of amplifier called an audio amplifier.   
+
+Provided for you is a PAM8302A class-D audio amplifier module.  Datasheet for this device is available for download on the course webpage.  The working of a class-D amplifier will be explained at a later lecture.  
+
+Test the audio amplifier with the circuit shown below.  You should hear the difference between the sound with and without this amplifier.
+
+<p align="center"> <img src="diagrams/fig7 _1.jpg" /> </p>
+
+Instead of using the WG to generate sine wave signals, you can connect this module to your circuit from the previous task. You now have a audio system from microphone, amplifier to speaker.
+
+___
+Congratulations! You have completed Lab 1.  You should keep these circuits on the breadboard because you will be needing some of them later for future Labs.
+___
+
+#### ADDITION NOTE
+
+You may find that due to the high gain of the two-stage microphone amplifier, and the 24dB additional gain of the audio amplifier, there exists a feedback path from the speaker back to the microphone, resulting in a positive feedback scenario.
+Such position feedback may manifest itself as perioding pulsing sound or continuous tone screaming from the speaker.  To avoid this, you will need to reduce the gain either of the two-stage microphone amplifier, or better, the gain of the class D audio amplifier.  Ask one of the staff to use the trimmer to adjust the potentiometer ont eh PAM8302A module to reduce the gain from 24dB to much lower. The oscillation will stop and you also avoid annoying neighborouring students!  
