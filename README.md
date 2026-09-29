@@ -147,3 +147,22 @@ You can replace the AP431i with a 2.5V DC voltage source to verify this circuit 
 
 [^1]: AP431i voltage reference is a improved version of the original TL431 voltage reference first introduced by Texas Instrument in 1977. It has become the de facto standard, low-cost, voltage reference device in industry used extensively in switched-mode power supply applications.  For those who wants to learn and understand the inner workings of this device, see this wiki page: https://en.wikipedia.org/wiki/TL431.
 
+___
+**Task 5: Gain-Bandwidth Product limitation – large Gain failure**
+---
+In this task, you will explore how the gain varies with signal frequency.
+
+<p align="center"> <img src="diagrams/fig5_1.jpg" /> </p>
+
+**Step 1:** Construct a voltage divider circuit with R5 and R6 as shown above.  Generate a sine wave signal at 1kHz, 2Vpk-pk and 1Vdc offset.  
+
+>What do you expect to see at the input of the op-amp (i.e. pin 3)?  
+
+**Step 2:** Replace R1 with a 2k resistor.  
+
+>.  What is the expected gain of your amplifier now?  Given the answer you provided in Step 1, what do you expect to see at the output of the op-amp V1?  
+
+Confirm your prediction with the oscilloscope.
+
+**Step 3:** Now vary the frequency from 100Hz to 100kHz in sensible steps and measure V1.   Plot the gain of this amplifier (in dB) versus frequency.  Explain the result with reference to MCP6002’s open-loop frequency response from the datasheet and the notes.
+
