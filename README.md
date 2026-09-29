@@ -202,7 +202,7 @@ Provided for you is a PAM8302A class-D audio amplifier module.  Datasheet for th
 
 Test the audio amplifier with the circuit shown below.  You should hear the difference between the sound with and without this amplifier.
 
-<p align="center"> <img src="diagrams/fig7 _1.jpg" /> </p>
+<p align="center"> <img src="diagrams/fig7_1.jpg" /> </p>
 
 Instead of using the WG to generate sine wave signals, you can connect this module to your circuit from the previous task. You now have a audio system from microphone, amplifier to speaker.
 
