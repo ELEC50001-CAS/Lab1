@@ -4,7 +4,7 @@
 #### ELEC50001 Circuits & Systems
 
 ### Lab 1 - Amplification
-##### *Peter Cheung, v3.3 - 12 October 2026*
+##### *Peter Cheung, v4.0 - 12 October 2026*
 
 ### Introduction
 
